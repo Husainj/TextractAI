@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Gemini Context Assistant",
+    "version": "1.0",
+    "description": "Ask Gemini about selected text",
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "css": ["content-styles.css"],
+      "js": ["content-script.js"]
+    }],
+    "host_permissions": [
+      "https://generativelanguage.googleapis.com/*"
+    ]
+  }
